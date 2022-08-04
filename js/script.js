@@ -23,6 +23,8 @@ const isCheked = false,
 
 console.log(isCheked || !isClose);
 
+const brain = 100;
+console.log(brain);
 
 
 
