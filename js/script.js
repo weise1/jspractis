@@ -21,7 +21,7 @@ console.log(2*4 === 8);
 const isCheked = false,
       isClose = false;
 
-console.log(isCheked || !isClose);
+console.log(isCheked || !isClose);  
 
 const brain = 100;
 console.log(brain);

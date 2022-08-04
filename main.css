@@ -8,3 +8,10 @@ h1 {
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
 }
+
+
+.img {
+    display: block;
+    margin-left: 350px;
+    
+}
