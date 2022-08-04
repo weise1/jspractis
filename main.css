@@ -1,0 +1,10 @@
+body {
+    background-color: rgb(199, 35, 231);
+}
+
+h1 {
+    color: aqua;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
