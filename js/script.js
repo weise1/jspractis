@@ -45,6 +45,56 @@ while (count < numberOfFilms) {
 console.log(personalMovieDB);
 
 
+//Operators
+
+
+if (4 == 4) {
+    console.log('ok');
+}
+
+const num = 50;
+
+if (num < 49) {
+    console.log('eroe');
+} else if (num > 100) {
+    console.log('Mnogo');
+} else {
+    console.log('ok');
+}
+
+
+// Тернарный оператор 
+
+// (num === 50) ? console.log('ok') : console.log('eroe');
+
+
+//Унарный +
+
+console.log(typeof(+'4')); // number
+
+//Swith
+
+
+switch (num) {
+    case 49:
+        console.log('Nevrno');
+        break;
+    case 100:
+        console.log('Neverno');
+        break;
+    case 50:
+        console.log('okey');
+        break;
+    default: 
+        console.log('Ne v etot');
+        break;
+}
+
+
+
+
+
+
 
 
 
