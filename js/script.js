@@ -1,63 +1,81 @@
-"use sreict";
+/* Задание на урок:
 
-// function firstTask() {
-//    // Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
-//    const arr = [3, 5, 8, 16, 20, 23, 50];
-//    const result = [];
-   
-//    console.log(arr.length);
+1) Автоматизировать вопросы пользователю про фильмы при помощи цикла
 
-//    for (let i = 0; i < 7; i++) {
-//       result[i] = arr[i];
-//    }
+2) Сделать так, чтобы пользователь не мог оставить ответ в виде пустой строки,
+отменить ответ или ввести название фильма длинее, чем 50 символов. Если это происходит - 
+возвращаем пользователя к вопросам опять
 
-//    console.log(result);
+3) При помощи условий проверить  personalMovieDB.count, и если он меньше 10 - вывести сообщение
+"Просмотрено довольно мало фильмов", если от 10 до 30 - "Вы классический зритель", а если больше - 
+"Вы киноман". А если не подошло ни к одному варианту - "Произошла ошибка"
 
-//    // Не трогаем
-//    return result;
+4) Потренироваться и переписать цикл еще двумя способами*/
+
+'use strict';
+
+// const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?');
+
+
+// const personalMovieDB = {
+//     count: numberOfFilms,
+//     movies: {},
+//     actors: {},
+//     genres: [],
+//     privat: false
+// };
+
+// let count = 0;
+
+// while (count < numberOfFilms) {
+//     let film1 = prompt('Один из последних просмотренных фильмов?');
+//     let film2 = prompt('Ha сколько оцените ego?');
+//     personalMovieDB.movies[film1] = film2;
+//     count++;
 // }
 
-// firstTask();
 
 
+   
+const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?');
 
-function secondTask() {
-   // Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
-   const data = [5, 10, 'Shopping', 20, 'Homework'];
+const personalMovieDB = {
+   count: numberOfFilms,
+   movies: {},
+   actors: {},
+   genres: [],
+   privat: false
+};
 
-   for (let i = 0; i < data.length; i++) {
-      if (typeof(data[i]) === 'number') {
-         data[i] = data[i] * 2;
-      }
-      else if (typeof(data[i]) === 'string') {
-         data[i] = `${data[i]} - done`;
-      }
+for (let i = 0; i < numberOfFilms; i++) {
+   const a = prompt('Один из последних просмотренных фильмов?'),
+         b = prompt('Ha сколько оцените ego?');
+
+   
+   if(a != '' && b != '' && a != null && b != null && a.length < 10) {
+      personalMovieDB.movies[a] = b;
+   } else {
+      console.log('Ошибка');
+      i--;
    }
-   console.log(data);
-   // Не трогаем
-   return data;
 }
 
-// secondTask();
+console.log(personalMovieDB);
 
-
-function thirdTask() {
-   // Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
-   const data = [5, 10, 'Shopping', 20, 'Homework'];
-   const result = [];
-
-   const newArr = data.reverse();  
-
-   for (let i = 0 ; i < data.length; i++) {
-      newArr[i] = result[i];
-   }
-   console.log(result);
-   // Не трогаем
-   return result;
+if (personalMovieDB.count < 10) {
+   console.log('Просмотрено довольно мало фильмов');
+} else if (10 >= personalMovieDB.count < 30) {
+   console.log('Вы классический зритель');
+} else {
+   console.log('Произошла ошибка');
 }
+   
 
 
-thirdTask();
+
+
+
+
 
 
 
