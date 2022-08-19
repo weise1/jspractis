@@ -5,7 +5,7 @@ function sayHello(name) {
 
 // Место для второй задачи
 function returnNeighboringNumbers(number) {
-   return [number - 1, number, number + 1]
+   return [number - 1, number, number + 1];
 }
 
 // Место для третьей задачи
